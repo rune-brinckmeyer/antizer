@@ -1,6 +1,7 @@
 {:examples
    {:dependencies [[reagent "0.8.0-alpha3"]
-                   [rum "0.11.2"]]
+                   [rum "0.11.2"]
+                   [org.omcljs/om "1.0.0-beta4-SNAPSHOT"]]
     :plugins [[lein-cljsbuild "1.1.5"]]
     :resource-paths ["examples/resources"]
     :source-paths ["examples/src"]
@@ -28,8 +29,8 @@
 
  :examples-dev
    [:examples
-     {:dependencies [[figwheel-sidecar "0.5.10"]]
-      :plugins [[lein-figwheel "0.5.10"]]
+     {:dependencies [[figwheel-sidecar "0.5.15"]]
+      :plugins [[lein-figwheel "0.5.15"]]
       :figwheel {:css-dirs ["examples/resources/css"]}
       :cljsbuild
        {:builds

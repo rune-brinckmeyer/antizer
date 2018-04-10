@@ -49,6 +49,13 @@
     `(defn ~(get-symbol-name component) [& args#]
       (apply antizer.rum/adapt-class
         (apply goog.object/getValueByKeys
+               ~antd-module ~(get-module-path component)) args#))))
+
+(defn define-om-component [component]
+  (let [component (name component)]
+    `(defn ~(get-symbol-name component) [& args#]
+      (apply antizer.om/adapt-class
+        (apply goog.object/getValueByKeys
           ~antd-module ~(get-module-path component)) args#))))
 
 (defmacro export-funcs []
@@ -64,6 +71,9 @@
   `(do ~@(map define-reagent-component antd/components)))
 
 (defmacro export-rum-components []
+  `(do ~@(map define-rum-component antd/components)))
+
+(defmacro export-om-components []
   `(do ~@(map define-rum-component antd/components)))
 
 ; (defn define-component [component]

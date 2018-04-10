@@ -152,7 +152,7 @@
     [:h2 "Messages"]
     [ant/button {:on-click #(ant/message-info "Normal message")} "Normal"]
     [ant/button {:on-click #(ant/message-success "Success message")} "Success"]
-    [ant/button {:on-click #(ant/message-warning "Warning message")} "Warning"]
+    [ant/button {:on-click #(ant/message-warn "Warning message")} "Warning"]
     [ant/button {:on-click #(ant/message-error "Error message")} "Error"]
     [ant/button {:on-click #(ant/message-loading "This message will disappear in 10 seconds" 10)} "Timed"]])
 

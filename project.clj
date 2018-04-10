@@ -11,4 +11,4 @@
   :codox {:language :clojurescript
           :metadata {:doc/format :markdown}
           :output-path "doc/dist/latest/api"
-          :namespaces [antizer.core antizer.reagent antizer.rum]})
+          :namespaces [antizer.core antizer.reagent antizer.rum antizer.om]})
