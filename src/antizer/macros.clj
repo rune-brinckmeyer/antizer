@@ -74,7 +74,7 @@
   `(do ~@(map define-rum-component antd/components)))
 
 (defmacro export-om-components []
-  `(do ~@(map define-rum-component antd/components)))
+  `(do ~@(map define-om-component antd/components)))
 
 ; (defn define-component [component]
 ;   `(defn ~(get-symbol-name component) [& args#]

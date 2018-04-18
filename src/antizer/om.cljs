@@ -31,7 +31,7 @@
 
 (defn create-form
    "Calls Form.create() wrapper with the form to be created. `form` should
-    be a `(rum.core/defcs)` component. Accepts the following options:
+    be a `(om.next/defui)` component. Accepts the following options:
 
     * :options - map of Form.create() options. Refer to: 
                  https://ant.design/components/form/#Form.create(options) for
@@ -41,15 +41,14 @@
                JavaScript associative map"
   [form & {:keys [options props] :or {options {} props {}}}]
   (js/React.createElement
-    (((getValueByKeys js/antd "Form" "create") (clj->js (ant/map-keys->camel-case options)))
-     (om/react-type form)) (clj->js props)))
+    (((getValueByKeys js/antd "Form" "create") (clj->js (ant/map-keys->camel-case options))) form) (clj->js props)))
 
 (defn get-form
   "Returns the `form` created by Form.create(). This function must be called
-   from within the `(rum.core/defcs)` component, while passing in the component's 
+   from within the `(om.next/defui)` component, while passing in the component's 
    `state`"
   [state]
-  (-> (om/props state)
+  (-> (getValueByKeys state "props")
       (js->clj :keywordize-keys true)
       :form))
 
