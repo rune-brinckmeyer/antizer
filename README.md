@@ -2,7 +2,7 @@
 
 [![Clojars Project](https://img.shields.io/clojars/v/org.clojars.elvn/antizer.svg)](https://clojars.org/org.clojars.elvn/antizer)
 
-Antizer is a ClojureScript library implementing [Ant Design](https://ant.design/) React components for [Reagent](https://github.com/reagent-project/reagent) and [Rum](https://github.com/tonsky/rum). 
+Antizer is a ClojureScript library implementing [Ant Design](https://ant.design/) React components for [om](https://github.com/omcljs/om), [Reagent](https://github.com/reagent-project/reagent) and [Rum](https://github.com/tonsky/rum). 
 
 Ant Design is an enterprise-class UI design language and React-based implementation with the following features:
 
@@ -11,6 +11,8 @@ Ant Design is an enterprise-class UI design language and React-based implementat
 * Extensive API documentation and examples.
 
 ## Resources
+
+* [Om Demo](https://priornix.github.io/antizer/latest/examples/om.html)
 
 * [Reagent Demo](https://priornix.github.io/antizer/latest/examples/reagent.html)
 
